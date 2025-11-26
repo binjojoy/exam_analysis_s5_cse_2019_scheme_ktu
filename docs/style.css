@@ -1,0 +1,49 @@
+/* Chosen Palette: Academic Insight (Deep Slate, Indigo, Teal, White) */
+
+/* Import Inter font (similar aesthetic to Google Sans Flex) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* --- Chart Container Styling (Critical for label fix) --- */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 450px; /* Increased base height for X-axis labels */
+    max-height: 500px;
+    margin: 0 auto;
+}
+@media (max-width: 640px) {
+    .chart-container {
+        height: 380px; /* Adjust for smaller screens */
+    }
+}
+/* -------------------------------------------------------- */
+
+/* --- Tab Styles --- */
+.tab-active {
+    border-bottom: 3px solid #4f46e5; /* Indigo-600 */
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.tab-inactive {
+    border-bottom: 3px solid transparent;
+    color: #64748b; /* Slate-500 */
+}
+
+.tab-inactive:hover {
+    color: #334155; /* Slate-800 */
+    border-bottom: 3px solid #cbd5e1; /* Slate-300 */
+}
+
+/* --- Prediction Card Hover Effect --- */
+.prediction-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.prediction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
